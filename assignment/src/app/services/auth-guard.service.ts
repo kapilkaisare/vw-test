@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { CanActivate, Router, ActivatedRouteSnapshot, RouterStateSnapshot,  NavigationExtras } from '@angular/router';
 import { AuthService } from './auth.service';
 
 @Injectable()
@@ -17,8 +17,14 @@ export class AuthGuard implements CanActivate {
 		if (this.authService.isLoggedIn) { return true; }
 
 		this.authService.redirectUrl = url;
+    let dummySessionId = Date.now();
 
-		this.router.navigate(['/login']);
+    let navigationExtras: NavigationExtras = {
+      queryParams: { 'session_id': dummySessionId },
+      fragment: 'anchor'
+    };
+
+		this.router.navigate(['/home'], navigationExtras);
 		return false;
 	}
 }

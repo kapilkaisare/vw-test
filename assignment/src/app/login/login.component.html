@@ -4,3 +4,22 @@
 <nav>
   <a routerLink="/" routerLinkActive="active">Home</a>
 </nav>
+<div>
+  <input *ngIf="!authService.isLoggedIn"
+    class="username" type="text" 
+    placeholder="Username"
+  />
+  <input *ngIf="!authService.isLoggedIn"
+    class="password" type="password" 
+    placeholder="Password"
+  />
+  <button *ngIf="!authService.isLoggedIn"
+    (click)="handleLogInClicked($event)"
+  >Log In</button>
+  <span *ngIf="authService.isLoggedIn">
+    You are logged in!
+  </span>
+  <button *ngIf="authService.isLoggedIn"
+    (click)="handleLogOutClicked($event)"
+  >Log Out</button>
+</div>
