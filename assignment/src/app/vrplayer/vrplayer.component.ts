@@ -12,7 +12,7 @@ export class VrplayerComponent implements OnInit {
   player: Player;
   nativeElement: any;
 
-  @Input() videoUrl: string;
+  @Input() url: string;
 
   @ViewChild('screen') screen;
 
