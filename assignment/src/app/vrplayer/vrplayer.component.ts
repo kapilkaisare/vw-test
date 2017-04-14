@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, Input } from '@angular/core';
 
 import { Player } from '../player/player';
 
@@ -11,6 +11,8 @@ export class VrplayerComponent implements OnInit {
 
   player: Player;
   nativeElement: any;
+
+  @Input() videoUrl: string;
 
   @ViewChild('screen') screen;
 
