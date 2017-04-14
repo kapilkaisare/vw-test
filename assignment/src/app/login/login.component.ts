@@ -21,7 +21,8 @@ export class LoginComponent implements OnInit {
 				let redirect = this.authService.redirectUrl ? this.authService.redirectUrl : '/dashboard';
 				let navigationExtras: NavigationExtras = {
 					preserveQueryParams: true,
-					preserveFragment: true
+					preserveFragment: true,
+					replaceUrl: true
 				};
 
 				this.router.navigate([redirect], navigationExtras);
