@@ -1,3 +1,9 @@
-<p>
-  vrplayer works!
-</p>
+<div class='vrplayer'>
+  <div class='screen' #screen >
+  </div>
+  <div class='navbar'>
+    <button (click)="handleStopButtonClicked($event)">Stop</button>
+    <button (click)="handlePlayButtonClicked($event)">Play</button>
+    <button (click)="handlePauseButtonClicked($event)">Pause</button>
+  </div>
+</div>

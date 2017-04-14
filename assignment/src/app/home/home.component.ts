@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { VrplayerComponent } from '../vrplayer/vrplayer.component';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',

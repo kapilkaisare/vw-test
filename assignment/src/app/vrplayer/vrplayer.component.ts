@@ -1,15 +1,35 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+
+import { Player } from '../player/player';
 
 @Component({
-  selector: 'app-vrplayer',
+  selector: 'vrplayer',
   templateUrl: './vrplayer.component.html',
   styleUrls: ['./vrplayer.component.css']
 })
 export class VrplayerComponent implements OnInit {
 
-  constructor() { }
+  player: Player;
+  nativeElement: any;
+
+  @ViewChild('screen') screen;
+
+  constructor() {
+    this.player = new Player();
+  }
 
   ngOnInit() {
   }
 
+  handleStopButtonClicked(ev: any): void {
+    this.player.stop();
+  }
+
+  handlePlayButtonClicked(ev: any): void {
+    this.player.play();
+  }
+
+  handlePauseButtonClicked(ev: any): void {
+    this.player.pause();
+  }
 }

@@ -12,8 +12,6 @@ import { LoginComponent } from './login/login.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { VrplayerComponent } from './vrplayer/vrplayer.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,

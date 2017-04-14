@@ -20,3 +20,6 @@ Assuming you have [Node](https://nodejs.org/en/) installed on your machine, type
 	$ npm install
 	$ ng serve
 
+You can see the app run at [http://localhost:4200/]().
+
+## Build Instructions
