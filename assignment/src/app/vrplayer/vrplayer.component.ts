@@ -16,11 +16,10 @@ export class VrplayerComponent implements OnInit {
 
   @ViewChild('screen') screen;
 
-  constructor() {
-    this.player = new Player();
-  }
+  constructor() {}
 
   ngOnInit() {
+    this.player = new Player(this.screen.nativeElement);
   }
 
   handleStopButtonClicked(ev: any): void {
