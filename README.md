@@ -14,6 +14,8 @@ Create a single page Angular2 app with 3 views : Home page, Login page and dashb
 * Requirement 3 - completed.
 *	Requirement 4 mentions a Cubenado Assignment which is not found in the folder titled 'Full_Stack'. I will exclude this from the solution.
 
+The project was started using Angular CLI, which was then dropped in favor of Webpack, largely to satisfy requirement 3. In the process, the project is based off the [Angular Webpack Starter](https://github.com/AngularClass/angular2-webpack-starter).
+
 ## Setup Instructions
 
 Assuming you have [Node](https://nodejs.org/en/) installed on your machine, type the following commands at a shell prompt:
