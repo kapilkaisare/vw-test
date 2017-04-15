@@ -11,7 +11,7 @@ Create a single page Angular2 app with 3 views : Home page, Login page and dashb
 
 * Requirement 1 - completed.
 * Requirement 2 - completed.
-* Requirement 3 - in progress.
+* Requirement 3 - completed.
 *	Requirement 4 mentions a Cubenado Assignment which is not found in the folder titled 'Full_Stack'. I will exclude this from the solution.
 
 ## Setup Instructions
@@ -21,8 +21,9 @@ Assuming you have [Node](https://nodejs.org/en/) installed on your machine, type
 	$ git clone https://github.com/kapilkaisare/vw-test.git
 	$ cd vw-test/assignment
 	$ npm install
-	$ ng serve
+	$ npm run server:prod
 
-You can see the app run at [http://localhost:4200/]().
+You can see the app run at [http://localhost:8080/]().
 
 ## Build Instructions
+	$ npm run build:prod
